@@ -3,7 +3,7 @@ import 'package:flutter_application_1/first.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: builder(),
-    debugShowCheckedModeBanner: false,
+    home: card(),
+    debugShowMaterialGrid: false,
   ));
 }
