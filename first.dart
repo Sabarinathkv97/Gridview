@@ -1,29 +1,26 @@
 import 'package:flutter/material.dart';
 
-class costom extends StatefulWidget {
-  const costom({super.key});
+class extend extends StatefulWidget {
+  const extend({super.key});
 
   @override
-  State<costom> createState() => _costomState();
+  State<extend> createState() => _extendState();
 }
 
-class _costomState extends State<costom> {
+class _extendState extends State<extend> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 235, 233, 229),
-        leading: Icon(
-          Icons.menu,
-          color: Color.fromARGB(31, 23, 23, 23),
+        backgroundColor: const Color.fromARGB(255, 240, 237, 237),
+        title: Text(
+          "gridrview.extend",
+          style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Container(
-        child: GridView(
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-          children: [Text("text1"), Text("text2"), Text("text3")],
-        ),
+      body: GridView.extent(
+        maxCrossAxisExtent: 150,
+        children: [cot],
       ),
     );
   }
